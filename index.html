@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>כוונה בתפילה | לא רק לומר — להתפלל</title>
+  <meta name="description" content="מפגש מעשי להכנסת יותר כוונה, משמעות וחיבור לתפילות הסליחות והחגים — כבר מהתפילה הקרובה.">
+  <meta name="theme-color" content="#f6f1e8">
+  <meta property="og:title" content="כוונה בתפילה | לא רק לומר — להתפלל">
+  <meta property="og:description" content="להחזיר את הלב אל הסליחות ותפילות החגים.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;600;700;800&family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #fbf8f2;
+      --paper-deep: #f1eadf;
+      --ink: #22201d;
+      --muted: #69635c;
+      --line: rgba(63, 55, 47, .16);
+      --wine: #7e3543;
+      --wine-dark: #602632;
+      --sage: #6f806b;
+      --sage-soft: #e7ece3;
+      --gold: #b68b4f;
+      --white: #fffdf9;
+      --serif: "Frank Ruhl Libre", Georgia, serif;
+      --sans: "Heebo", Arial, sans-serif;
+      --shadow: 0 24px 70px rgba(66, 49, 35, .10), 0 4px 16px rgba(66, 49, 35, .05);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: clip; }
+    body {
+      margin: 0;
+      overflow-x: clip;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      font-size: 18px;
+      line-height: 1.75;
+      text-rendering: optimizeLegibility;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: .25;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");
+    }
+    a { color: inherit; }
+    button, input { font: inherit; }
+    img, svg { display: block; max-width: 100%; }
+    .container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .narrow { width: min(760px, calc(100% - 40px)); margin-inline: auto; }
+    .section { padding: 92px 0; }
+    .section-soft { background: var(--paper-deep); }
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--wine);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3, blockquote { font-family: var(--serif); }
+    h1, h2, h3 { margin-top: 0; text-wrap: balance; }
+    h1 {
+      margin-bottom: 24px;
+      font-size: clamp(3.25rem, 7.5vw, 6.5rem);
+      line-height: .98;
+      letter-spacing: -.045em;
+      font-weight: 800;
+    }
+    h2 {
+      margin-bottom: 24px;
+      font-size: clamp(2.15rem, 4.6vw, 3.85rem);
+      line-height: 1.05;
+      letter-spacing: -.025em;
+    }
+    h3 { margin-bottom: 10px; font-size: 1.45rem; line-height: 1.2; }
+    p { margin-top: 0; }
+    .lead { max-width: 710px; color: #4f4a44; font-size: clamp(1.1rem, 2.3vw, 1.35rem); line-height: 1.65; }
+    .muted { color: var(--muted); }
+
+    .site-header {
+      position: absolute;
+      top: 0;
+      inset-inline: 0;
+      z-index: 10;
+      padding: 24px 0;
+    }
+    .header-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-family: var(--serif); font-size: 1.3rem; font-weight: 700; }
+    .brand-mark { width: 38px; height: 38px; color: var(--wine); }
+    .header-link { font-size: .92rem; font-weight: 700; text-decoration: none; border-bottom: 1px solid currentColor; }
+
+    .hero { position: relative; min-height: 890px; display: grid; align-items: center; padding: 130px 0 100px; overflow: hidden; }
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: -12vw;
+      top: -20vw;
+      width: 53vw;
+      height: 53vw;
+      min-width: 520px;
+      min-height: 520px;
+      border: 1px solid rgba(126, 53, 67, .16);
+      border-radius: 50%;
+      box-shadow: 0 0 0 34px rgba(126, 53, 67, .025), 0 0 0 80px rgba(126, 53, 67, .018);
+    }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr .85fr; gap: 76px; align-items: center; }
+    .hero-copy { max-width: 680px; }
+    .hero-kicker { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 22px; color: var(--wine); font-size: .92rem; font-weight: 700; }
+    .hero-kicker::before { content: ""; width: 42px; height: 1px; background: currentColor; }
+    .hero-highlight { color: var(--wine); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 34px; }
+    .button {
+      min-height: 54px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 26px;
+      border: 1px solid transparent;
+      border-radius: 7px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid rgba(126, 53, 67, .28); outline-offset: 3px; }
+    .button-primary { color: white; background: var(--wine); box-shadow: 0 10px 28px rgba(126, 53, 67, .22); }
+    .button-primary:hover { background: var(--wine-dark); }
+    .button-secondary { color: var(--wine-dark); border-color: rgba(126, 53, 67, .3); background: transparent; }
+    .microcopy { margin: 12px 0 0; color: var(--muted); font-size: .84rem; }
+
+    .hero-art { position: relative; min-height: 540px; display: grid; place-items: center; }
+    .prayer-card {
+      position: relative;
+      width: min(100%, 390px);
+      padding: 62px 48px 54px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 190px 190px 18px 18px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .prayer-card::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(182, 139, 79, .28);
+      border-radius: 170px 170px 11px 11px;
+      pointer-events: none;
+    }
+    .prayer-card .small { position: relative; color: var(--sage); font-size: .84rem; font-weight: 700; letter-spacing: .09em; }
+    .prayer-card blockquote { position: relative; margin: 24px 0 18px; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.18; font-weight: 700; }
+    .prayer-card p { position: relative; margin: 0 auto; max-width: 260px; color: var(--muted); font-size: .95rem; }
+    .thread { position: absolute; width: 124px; height: 124px; color: var(--gold); opacity: .65; }
+    .thread-top { top: 6%; right: -2%; transform: rotate(12deg); }
+    .thread-bottom { bottom: 4%; left: -3%; transform: rotate(190deg); }
+
+    .opening { text-align: center; }
+    .opening blockquote { margin: 32px auto; max-width: 880px; color: var(--wine-dark); font-size: clamp(2rem, 4.4vw, 3.5rem); line-height: 1.28; font-weight: 600; }
+    .opening p { max-width: 690px; margin-inline: auto; }
+
+    .split { display: grid; grid-template-columns: .85fr 1.15fr; gap: 84px; align-items: start; }
+    .sticky-title { position: sticky; top: 36px; }
+    .pain-list { border-top: 1px solid var(--line); }
+    .pain-row { display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 26px 0; border-bottom: 1px solid var(--line); }
+    .pain-number { color: var(--gold); font-family: var(--serif); font-size: 1.35rem; font-weight: 700; }
+    .pain-row p { margin: 0; color: var(--muted); }
+
+    .turning-point { color: white; background: var(--wine-dark); }
+    .turning-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .turning-point .eyebrow { color: #e8cba5; }
+    .turning-point .lead { color: rgba(255,255,255,.78); }
+    .truth {
+      padding: 38px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.055);
+    }
+    .truth p { margin-bottom: 22px; font-family: var(--serif); font-size: 1.45rem; line-height: 1.45; }
+    .truth p:last-child { margin-bottom: 0; }
+    .truth strong { color: #f0d8b5; }
+
+    .method-intro { max-width: 780px; margin-bottom: 48px; }
+    .method { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--white); box-shadow: 0 12px 40px rgba(66,49,35,.05); }
+    .method-step { min-height: 310px; padding: 38px 32px; border-inline-start: 1px solid var(--line); }
+    .method-step:first-child { border-inline-start: 0; }
+    .method-letter { margin-bottom: 58px; color: var(--wine); font-family: var(--serif); font-size: 4rem; line-height: 1; font-weight: 800; }
+    .method-step p { color: var(--muted); }
+
+    .benefits-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 74px; align-items: start; }
+    .benefit-list { margin: 0; padding: 0; list-style: none; }
+    .benefit-item { position: relative; padding: 0 48px 28px 0; }
+    .benefit-item::before { content: "✓"; position: absolute; right: 0; top: 1px; width: 30px; height: 30px; display: grid; place-items: center; color: var(--wine); border: 1px solid rgba(126,53,67,.28); border-radius: 50%; font-size: .9rem; font-weight: 700; }
+    .benefit-item p { margin: 4px 0 0; color: var(--muted); }
+
+    .experience-box { padding: 36px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
+    .experience-line { display: grid; grid-template-columns: 82px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .experience-line:last-child { border-bottom: 0; }
+    .experience-line span { color: var(--wine); font-weight: 700; }
+    .experience-line p { margin: 0; }
+
+    .audience { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+    .audience-card { padding: 36px; border-radius: var(--radius); }
+    .audience-yes { background: var(--sage-soft); }
+    .audience-no { border: 1px solid var(--line); background: transparent; }
+    .audience ul { margin: 20px 0 0; padding: 0; list-style: none; }
+    .audience li { padding: 11px 0; border-bottom: 1px solid rgba(63,55,47,.12); }
+    .audience li:last-child { border-bottom: 0; }
+
+    .fomo { text-align: center; }
+    .fomo h2 { max-width: 900px; margin-inline: auto; }
+    .fomo .lead { margin-inline: auto; }
+    .fomo-line { width: 1px; height: 72px; margin: 34px auto; background: linear-gradient(var(--gold), transparent); }
+
+    .register { padding: 100px 0; background: #292521; color: white; }
+    .register-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 74px; align-items: center; }
+    .register .eyebrow { color: #e8cba5; }
+    .register h2 { color: white; }
+    .register-copy p { color: rgba(255,255,255,.72); }
+    .register-points { margin: 28px 0 0; padding: 0; list-style: none; }
+    .register-points li { padding: 8px 0; color: rgba(255,255,255,.85); }
+    .form-card { padding: 38px; color: var(--ink); background: var(--white); border-radius: var(--radius); box-shadow: 0 28px 80px rgba(0,0,0,.22); }
+    .form-card h3 { font-size: 2rem; }
+    .form-card > p { color: var(--muted); }
+    .field { margin-bottom: 18px; }
+    label { display: block; margin-bottom: 7px; font-size: .9rem; font-weight: 700; }
+    input {
+      width: 100%;
+      min-height: 52px;
+      padding: 11px 14px;
+      color: var(--ink);
+      background: white;
+      border: 1px solid rgba(63,55,47,.25);
+      border-radius: 6px;
+    }
+    input::placeholder { color: #958d85; }
+    .form-card .button { width: 100%; margin-top: 8px; }
+    .privacy { margin: 13px 0 0; color: var(--muted); font-size: .78rem; text-align: center; }
+    .form-message { display: none; margin-top: 16px; padding: 12px 14px; border-radius: 6px; font-size: .9rem; }
+    .form-message.success { display: block; color: #31533c; background: #e7f2e8; }
+    .form-message.error { display: block; color: #772f38; background: #f8e7e9; }
+    .hp-field { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
+
+    .faq-list { max-width: 820px; margin: 38px auto 0; border-top: 1px solid var(--line); }
+    details { border-bottom: 1px solid var(--line); }
+    summary { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 0; font-weight: 700; cursor: pointer; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; color: var(--wine); font-family: var(--serif); font-size: 1.7rem; font-weight: 500; }
+    details[open] summary::after { content: "−"; }
+    details p { max-width: 700px; padding-bottom: 22px; color: var(--muted); }
+
+    footer { padding: 32px 0; color: var(--muted); border-top: 1px solid var(--line); font-size: .82rem; text-align: center; }
+
+    .mobile-cta { display: none; }
+
+    @media (max-width: 860px) {
+      .section { padding: 68px 0; }
+      .hero { min-height: auto; padding-top: 125px; }
+      .hero-grid, .split, .turning-grid, .benefits-layout, .register-grid { grid-template-columns: 1fr; gap: 48px; }
+      .hero-copy { text-align: center; margin-inline: auto; }
+      .hero-copy .lead { margin-inline: auto; }
+      .hero-actions { justify-content: center; }
+      .hero-art { min-height: 450px; }
+      .prayer-card { max-width: 350px; }
+      .sticky-title { position: static; }
+      .method { grid-template-columns: 1fr; }
+      .method-step { min-height: auto; border-inline-start: 0; border-top: 1px solid var(--line); }
+      .method-step:first-child { border-top: 0; }
+      .method-letter { margin-bottom: 24px; }
+      .audience { grid-template-columns: 1fr; }
+      .register-copy { text-align: center; }
+    }
+
+    @media (max-width: 580px) {
+      body { font-size: 16px; }
+      .container, .narrow { width: min(100% - 28px, 1120px); }
+      .site-header { padding: 17px 0; }
+      .header-link { display: none; }
+      .hero { padding-bottom: 70px; }
+      h1 { font-size: clamp(3rem, 15vw, 4.25rem); }
+      h2 { font-size: clamp(2rem, 10vw, 2.75rem); }
+      .hero-actions { display: grid; grid-template-columns: 1fr; width: 100%; }
+      .button { width: 100%; }
+      .hero-art { min-height: 390px; }
+      .prayer-card { padding: 54px 34px 46px; border-radius: 150px 150px 16px 16px; }
+      .prayer-card::before { border-radius: 135px 135px 10px 10px; }
+      .thread { width: 94px; height: 94px; }
+      .pain-row { grid-template-columns: 34px 1fr; gap: 12px; }
+      .truth, .experience-box, .audience-card, .form-card, .method-step { padding: 28px 22px; }
+      .experience-line { grid-template-columns: 1fr; gap: 2px; }
+      .form-card h3 { font-size: 1.7rem; }
+      .register { padding: 72px 0 90px; }
+      .mobile-cta {
+        position: fixed;
+        z-index: 30;
+        bottom: 0;
+        inset-inline: 0;
+        display: block;
+        padding: 10px 14px max(10px, env(safe-area-inset-bottom));
+        background: rgba(251,248,242,.96);
+        border-top: 1px solid var(--line);
+        backdrop-filter: blur(10px);
+      }
+      .mobile-cta .button { min-height: 48px; }
+      footer { padding-bottom: 88px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#top" aria-label="כוונה בתפילה — חזרה לראש הדף">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <path d="M24 43C18 35 9 29 9 19.5A10.5 10.5 0 0 1 28 13a10.5 10.5 0 0 1 11 10.5C39 32 30 37 24 43Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M24 41V17m0 7c-5-5-9-4-12-2m12 8c5-5 9-4 12-2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span>כוונה בתפילה</span>
+      </a>
+      <a class="header-link" href="#register">לקבלת פרטי המפגש</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker">מפגש מעשי לקראת הסליחות ותפילות החגים</p>
+          <h1 id="hero-title">לא רק לומר — <span class="hero-highlight">להתפלל</span></h1>
+          <p class="lead">את המילים של התפילה כבר יש לך. עכשיו הגיע הזמן לגלות איך לעצור בתוכן, להכניס אליהן את החיים שלך — ולהחזיר את הלב אל התפילה.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#register">אני רוצה לקבל את פרטי המפגש</a>
+            <a class="button button-secondary" href="#what-you-get">מה אקבל במפגש?</a>
+          </div>
+          <p class="microcopy">אין צורך בידע מוקדם • מתאים לנשים ולגברים • פרטי המפגש יישלחו לנרשמים</p>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <svg class="thread thread-top" viewBox="0 0 140 140">
+            <path d="M19 108C33 38 90 18 119 43 141 63 109 88 76 72 48 58 43 26 65 15" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="19" cy="108" r="3" fill="currentColor"/>
+          </svg>
+          <article class="prayer-card">
+            <span class="small">מילים • משמעות • חיים</span>
+            <blockquote>פחות מילים.<br>יותר מפגש.</blockquote>
+            <p>כוונה אינה מצב שבו המחשבות לא בורחות. כוונה היא היכולת לחזור.</p>
+          </article>
+          <svg class="thread thread-bottom" viewBox="0 0 140 140">
+            <path d="M19 108C33 38 90 18 119 43 141 63 109 88 76 72 48 58 43 26 65 15" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="19" cy="108" r="3" fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft opening">
+      <div class="narrow">
+        <p class="eyebrow">אולי התחושה הזאת מוכרת לך</p>
+        <blockquote>“אני מתפללת — אבל אני לא תמיד מרגישה שאני באמת מתפללת.”</blockquote>
+        <p class="lead">מכירים את המילים, את המנגינות ואת סדר התפילה — אבל לפעמים יש פער בין הפה שאומר לבין הלב שאמור להיות שם. המפגש הזה נוצר בדיוק בשביל הפער הזה.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="pain-title">
+      <div class="container split">
+        <div class="sticky-title">
+          <p class="eyebrow">זה לא אומר שמשהו לא בסדר בך</p>
+          <h2 id="pain-title">כשהתפילה הופכת לטקסט מוכר — והלב נשאר בחוץ</h2>
+          <p class="lead">לא חסר לך רצון. לפעמים פשוט אף אחד לא לימד אותך מה עושים עם הקשב בזמן התפילה.</p>
+        </div>
+        <div class="pain-list">
+          <article class="pain-row">
+            <span class="pain-number">01</span>
+            <div><h3>המילים כבר לא נוגעות כמו פעם</h3><p>אותן תפילות, אותן מנגינות — והחוויה נעשית אוטומטית.</p></div>
+          </article>
+          <article class="pain-row">
+            <span class="pain-number">02</span>
+            <div><h3>לא ברור על מה לחשוב</h3><p>להבין כל מילה? לדמיין? להתרכז? ומה עושים כשהמחשבות שוב בורחות?</p></div>
+          </article>
+          <article class="pain-row">
+            <span class="pain-number">03</span>
+            <div><h3>הראש מבין — אבל הלב עדיין לא שם</h3><p>עוד פירוש ועוד שיעור יכולים להוסיף ידע, אבל תפילה היא גם נוכחות, הקשבה ומפגש.</p></div>
+          </article>
+          <article class="pain-row">
+            <span class="pain-number">04</span>
+            <div><h3>התפילה הפכה לעוד מבחן</h3><p>“האם התרכזתי מספיק? התרגשתי מספיק?” — במקום לפגוש את התפילה שלך כפי שהיא.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section turning-point" aria-labelledby="turn-title">
+      <div class="container turning-grid">
+        <div>
+          <p class="eyebrow">השינוי מתחיל בהגדרה חדשה</p>
+          <h2 id="turn-title">כוונה אינה ריכוז מושלם. כוונה היא היכולת לחזור.</h2>
+          <p class="lead">המחשבה ברחה? חוזרים. מילה נגעה בנו? נשארים איתה רגע. משהו מהחיים עלה? אולי הוא לא מפריע לתפילה — אולי הוא הגיע אליה.</p>
+        </div>
+        <div class="truth">
+          <p><strong>לא</strong> נלמד איך להיראות כמו מישהו שמתפלל.</p>
+          <p><strong>כן</strong> נלמד איך להיות בתוך התפילה שלנו.</p>
+          <p><strong>לא</strong> עוד הרצאה על תפילה.</p>
+          <p><strong>כן</strong> הזמנה להיכנס אליה.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="method-title">
+      <div class="container">
+        <div class="method-intro">
+          <p class="eyebrow">כלי פשוט שאפשר לקחת לכל תפילה</p>
+          <h2 id="method-title">שיטת ח.מ.ל — ממילים למפגש</h2>
+          <p class="lead">במקום לנסות “לכבוש” את כל המחזור, נלמד דרך קצרה למצוא שער אחד ולהיכנס דרכו פנימה.</p>
+        </div>
+        <div class="method">
+          <article class="method-step">
+            <div class="method-letter">ח</div>
+            <h3>חיבור</h3>
+            <p>מה אני מביא או מביאה איתי לתפילה? מה עבר עליי, מה כואב, ועל מה אני רוצה להודות?</p>
+          </article>
+          <article class="method-step">
+            <div class="method-letter">מ</div>
+            <h3>משמעות</h3>
+            <p>איזו מילה, בקשה או שורה פוגשת אותי עכשיו — ומה היא אומרת לי בתוך החיים שלי?</p>
+          </article>
+          <article class="method-step">
+            <div class="method-letter">ל</div>
+            <h3>לב</h3>
+            <p>מה אני באמת רוצה לבקש, לשחרר, לשנות או לקחת איתי אל השנה החדשה?</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="what-you-get" aria-labelledby="benefits-title">
+      <div class="container benefits-layout">
+        <div>
+          <p class="eyebrow">מה יישאר איתך אחרי המפגש</p>
+          <h2 id="benefits-title">לא רק הבנה חדשה — דרך מעשית לתפילה הקרובה</h2>
+          <ul class="benefit-list">
+            <li class="benefit-item"><h3>להפסיק להילחם בהסחות הדעת</h3><p>ללמוד לשים לב, לעצור ולחזור — בלי להפוך כל מחשבה שברחה לכישלון.</p></li>
+            <li class="benefit-item"><h3>למצוא “שער” בתוך התפילה</h3><p>לקחת מילה או משפט אחד ולהפוך אותו למרחב של משמעות והתבוננות.</p></li>
+            <li class="benefit-item"><h3>להפוך סליחות לחשבון נפש אישי</h3><p>לשאול מה הגיע הזמן להשאיר מאחור, לתקן, לסלוח ולבקש.</p></li>
+            <li class="benefit-item"><h3>להגיע לראש השנה עם בקשה ברורה</h3><p>לא רק “שתהיה שנה טובה” — אלא מה אני באמת מבקש ומה אני מוכן לשנות.</p></li>
+            <li class="benefit-item"><h3>לגלות עומק שכבר נמצא בסידור</h3><p>התבוננות, הודיה, בקשה, הקשבה והתחדשות — מתוך המסורת היהודית עצמה.</p></li>
+          </ul>
+        </div>
+        <aside class="experience-box" aria-label="מבנה התרגול במפגש">
+          <p class="eyebrow">מתרגלים בזמן אמת</p>
+          <h3>מהמילה — אל המשמעות — אל החיים</h3>
+          <p class="muted">המפגש אינו רק הרצאה. ניקח קטע קצר מתפילות החגים ונעבור יחד תהליך שאפשר לחזור עליו בבית.</p>
+          <div class="experience-line"><span>לפני</span><p>מה אני מביא או מביאה איתי לתפילה?</p></div>
+          <div class="experience-line"><span>בתוך</span><p>מה פוגש אותי במילה או במשפט הזה?</p></div>
+          <div class="experience-line"><span>אחרי</span><p>מה אני לוקח או לוקחת איתי מכאן?</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="audience-title">
+      <div class="container">
+        <p class="eyebrow">למי זה מתאים?</p>
+        <h2 id="audience-title">לכל מי שאוהב יהדות — גם אם הוא לא מחפש “עוד שיעור ביהדות”</h2>
+        <div class="audience">
+          <article class="audience-card audience-yes">
+            <h3>המפגש מתאים לך אם…</h3>
+            <ul>
+              <li>יש לך זיקה לתפילה, למסורת או לחגים — דתית, מסורתית או חילונית.</li>
+              <li>את או אתה מכירים את המילים, אבל רוצים לפגוש אותן אחרת.</li>
+              <li>יש עניין במיינדפולנס, התפתחות אישית או עבודה פנימית.</li>
+              <li>חשוב לך להיכנס לשנה החדשה עם יותר חיבור ומשמעות.</li>
+            </ul>
+          </article>
+          <article class="audience-card audience-no">
+            <h3>מה המפגש אינו</h3>
+            <ul>
+              <li>לא שיעור הלכתי ולא סקירה אקדמית של נוסח התפילה.</li>
+              <li>לא מבחן ברוחניות ולא הבטחה לריכוז מושלם.</li>
+              <li>לא ניסיון לשכנע אותך להיות “דתי יותר”.</li>
+              <li>לא עוד אוסף פירושים שצריך לזכור.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft fomo" aria-labelledby="fomo-title">
+      <div class="narrow">
+        <p class="eyebrow">החגים יגיעו בכל מקרה</p>
+        <h2 id="fomo-title">השאלה היא רק איך נגיע אליהם</h2>
+        <div class="fomo-line" aria-hidden="true"></div>
+        <p class="lead">אפשר להגיע שוב עם הסידור ביד והמחשבות במקום אחר. ואפשר לעצור רגע לפני, להכין את הלב, ולגלות מה יכול לקרות כשנכנסים באמת לתוך המילים.</p>
+        <p><strong>אל תתנו לעוד שנה לעבור עם אותן תפילות — בלי לגלות את המפגש שהן יכולות לפתוח.</strong></p>
+      </div>
+    </section>
+
+    <section class="register" id="register" aria-labelledby="register-title">
+      <div class="container register-grid">
+        <div class="register-copy">
+          <p class="eyebrow">כוונה בתפילה</p>
+          <h2 id="register-title">להחזיר את הלב אל הסליחות ותפילות החגים</h2>
+          <p class="lead">השאירו פרטים לקבלת מועד המפגש וכל הפרטים. נצא יחד עם דרך פשוטה ומעשית להכניס יותר כוונה, משמעות וחיבור — כבר מהתפילה הקרובה.</p>
+          <ul class="register-points">
+            <li>✓ מתאים לנשים ולגברים</li>
+            <li>✓ לא נדרש ידע מוקדם</li>
+            <li>✓ כולל תרגול מעשי בזמן המפגש</li>
+          </ul>
+        </div>
+
+        <div class="form-card">
+          <h3>לקבלת פרטי המפגש</h3>
+          <p>מלאו את הפרטים ונעדכן אתכם במועד ובקישור להשתתפות.</p>
+          <form id="registration-form" novalidate>
+            529|            <div class="hp-field" aria-hidden="true">
+              <label for="website">אתר</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="name">שם מלא *</label>
+              <input id="name" name="name" type="text" autocomplete="name" required placeholder="איך לפנות אליך?">
+            </div>
+            <div class="field">
+              <label for="email">דוא״ל</label>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" dir="ltr" placeholder="name@example.com">
+            </div>
+            <div class="field">
+              <label for="phone">טלפון</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" dir="ltr" placeholder="050-0000000">
+            </div>
+            <button class="button button-primary" type="submit" id="submit-button">שלחו לי את פרטי המפגש</button>
+            <p class="privacy">הפרטים ישמשו לעדכונים על המפגש ותכנים בנושא. ניתן להסיר את עצמך בכל עת.</p>
+            <div class="form-message" id="form-message" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="narrow">
+        <p class="eyebrow">שאלות נפוצות</p>
+        <h2 id="faq-title">לפני שנפגשים</h2>
+        <div class="faq-list">
+          <details>
+            <summary>האם צריך רקע דתי או ידע בתפילה?</summary>
+            <p>לא. המפגש מיועד לכל מי שיש לו זיקה או סקרנות כלפי התפילה היהודית ורצון לחוות אותה באופן אישי ומשמעותי יותר.</p>
+          </details>
+          <details>
+            <summary>האם המפגש מתאים גם לגברים?</summary>
+            <p>כן. השפה והכלים במפגש מתאימים לנשים ולגברים, דתיים, מסורתיים וחילונים בעלי זיקה ליהדות.</p>
+          </details>
+          <details>
+            <summary>האם זה שיעור על פירוש התפילה?</summary>
+            <p>לא רק. המטרה היא לא לצבור עוד ידע, אלא ללמוד איך לעבוד עם מילה או קטע מהתפילה ולהפוך אותם למפגש חי עם החיים שלנו.</p>
+          </details>
+          <details>
+            <summary>מתי ואיפה מתקיים המפגש?</summary>
+            <p>המועד וקישור ההשתתפות יישלחו לנרשמים. השאירו פרטים בטופס ונעדכן אתכם ברגע שהפרטים ייקבעו.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">כוונה בתפילה · פחות מילים, יותר מפגש</div>
+  </footer>
+
+  <div class="mobile-cta" aria-label="הרשמה מהירה">
+    <a class="button button-primary" href="#register">לקבלת פרטי המפגש</a>
+  </div>
+
+  <script>
+    (() => {
+      const form = document.getElementById('registration-form');
+      const button = document.getElementById('submit-button');
+      const message = document.getElementById('form-message');
+
+      const showMessage = (text, type) => {
+        message.textContent = text;
+        message.className = `form-message ${type}`;
+      };
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        message.className = 'form-message';
+
+        const data = Object.fromEntries(new FormData(form).entries());
+        const name = data.name.trim();
+        const email = data.email.trim();
+        const phone = data.phone.trim();
+
+        if (data.website) return;
+        if (!name) {
+          showMessage('נשמח לדעת איך לפנות אליך.', 'error');
+          document.getElementById('name').focus();
+          return;
+        }
+        if (!email && !phone) {
+          showMessage('יש למלא לפחות דוא״ל או מספר טלפון כדי שנוכל לשלוח את הפרטים.', 'error');
+          document.getElementById('email').focus();
+          return;
+        }
+        if (email && !document.getElementById('email').checkValidity()) {
+          showMessage('כתובת הדוא״ל אינה תקינה. כדאי לבדוק ולנסות שוב.', 'error');
+          document.getElementById('email').focus();
+          return;
+        }
+
+        button.disabled = true;
+        button.textContent = 'שולחים…';
+
+        try {
+          const response = await fetch('/api/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, phone, website: data.website })
+          });
+          const result = await response.json();
+          if (!response.ok || !result.success) throw new Error(result.error || 'ההרשמה לא הושלמה');
+          form.reset();
+          showMessage('תודה, הפרטים התקבלו. נשלח אליך את פרטי המפגש ברגע שייקבעו.', 'success');
+        } catch (error) {
+          showMessage('לא הצלחנו להשלים את ההרשמה כרגע. אפשר לנסות שוב בעוד רגע.', 'error');
+        } finally {
+          button.disabled = false;
+          button.textContent = 'שלחו לי את פרטי המפגש';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

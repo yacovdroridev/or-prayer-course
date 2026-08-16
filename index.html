@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>כוונה בתפילה | לא רק לומר — להתפלל</title>
+  <title>אור | כוונה בתפילה</title>
   <meta name="description" content="מפגש מעשי להכנסת יותר כוונה, משמעות וחיבור לתפילות הסליחות והחגים — כבר מהתפילה הקרובה.">
   <meta name="theme-color" content="#f6f1e8">
-  <meta property="og:title" content="כוונה בתפילה | לא רק לומר — להתפלל">
+  <meta property="og:title" content="אור | כוונה בתפילה">
   <meta property="og:description" content="להחזיר את הלב אל הסליחות ותפילות החגים.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -325,12 +325,12 @@
 <body>
   <header class="site-header">
     <div class="container header-row">
-      <a class="brand" href="#top" aria-label="כוונה בתפילה — חזרה לראש הדף">
+      <a class="brand" href="#top" aria-label="אור — חזרה לראש הדף">
         <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
           <path d="M24 43C18 35 9 29 9 19.5A10.5 10.5 0 0 1 28 13a10.5 10.5 0 0 1 11 10.5C39 32 30 37 24 43Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
           <path d="M24 41V17m0 7c-5-5-9-4-12-2m12 8c5-5 9-4 12-2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
-        <span>כוונה בתפילה</span>
+        <span>אור</span>
       </a>
       <a class="header-link" href="#register">לקבלת פרטי המפגש</a>
     </div>
@@ -340,8 +340,8 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="hero-kicker">מפגש מעשי לקראת הסליחות ותפילות החגים</p>
-          <h1 id="hero-title">לא רק לומר — <span class="hero-highlight">להתפלל</span></h1>
+          <p class="hero-kicker">פרויקט אור · מפגש מעשי לקראת הסליחות ותפילות החגים</p>
+          <h1 id="hero-title"><span class="hero-highlight">כוונה בתפילה</span></h1>
           <p class="lead">את המילים של התפילה כבר יש לך. עכשיו הגיע הזמן לגלות איך לעצור בתוכן, להכניס אליהן את החיים שלך — ולהחזיר את הלב אל התפילה.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#register">אני רוצה לקבל את פרטי המפגש</a>
@@ -357,7 +357,7 @@
           </svg>
           <article class="prayer-card">
             <span class="small">מילים • משמעות • חיים</span>
-            <blockquote>פחות מילים.<br>יותר מפגש.</blockquote>
+            <blockquote>להכניס משמעות,<br>נוכחות וחיבור.</blockquote>
             <p>כוונה אינה מצב שבו המחשבות לא בורחות. כוונה היא היכולת לחזור.</p>
           </article>
           <svg class="thread thread-bottom" viewBox="0 0 140 140">
@@ -525,7 +525,7 @@
           <h3>לקבלת פרטי המפגש</h3>
           <p>מלאו את הפרטים ונעדכן אתכם במועד ובקישור להשתתפות.</p>
           <form id="registration-form" novalidate>
-            529|            <div class="hp-field" aria-hidden="true">
+            <div class="hp-field" aria-hidden="true">
               <label for="website">אתר</label>
               <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
             </div>
@@ -576,7 +576,7 @@
   </main>
 
   <footer>
-    <div class="container">כוונה בתפילה · פחות מילים, יותר מפגש</div>
+    <div class="container">פרויקט אור · כוונה בתפילה</div>
   </footer>
 
   <div class="mobile-cta" aria-label="הרשמה מהירה">
@@ -594,8 +594,15 @@
         message.className = `form-message ${type}`;
       };
 
+      if (location.hostname.endsWith('github.io')) {
+        button.disabled = true;
+        button.textContent = 'ההרשמה תיפתח בקרוב';
+        showMessage('הדף פתוח כעת לצפייה. ערוץ ההרשמה יחובר לפני פתיחת המפגש.', 'success');
+      }
+
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
+        if (location.hostname.endsWith('github.io')) return;
         message.className = 'form-message';
 
         const data = Object.fromEntries(new FormData(form).entries());

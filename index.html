@@ -594,15 +594,10 @@
         message.className = `form-message ${type}`;
       };
 
-      if (location.hostname.endsWith('github.io')) {
-        button.disabled = true;
-        button.textContent = 'ההרשמה תיפתח בקרוב';
-        showMessage('הדף פתוח כעת לצפייה. ערוץ ההרשמה יחובר לפני פתיחת המפגש.', 'success');
-      }
+      const API_ENDPOINT = 'https://yacov-gs65-stealth-9sg.tailb4f2c4.ts.net:8443/or-leads/api/register';
 
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
-        if (location.hostname.endsWith('github.io')) return;
         message.className = 'form-message';
 
         const data = Object.fromEntries(new FormData(form).entries());
@@ -631,15 +626,15 @@
         button.textContent = 'שולחים…';
 
         try {
-          const response = await fetch('/api/register', {
+          const response = await fetch(API_ENDPOINT, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, email, phone, website: data.website })
+            body: JSON.stringify({ name, email, phone, website: data.website, source: location.href })
           });
           const result = await response.json();
-          if (!response.ok || !result.success) throw new Error(result.error || 'ההרשמה לא הושלמה');
+          if (!response.ok || result.status !== 'success') throw new Error(result.message || 'ההרשמה לא הושלמה');
           form.reset();
-          showMessage('תודה, הפרטים התקבלו. נשלח אליך את פרטי המפגש ברגע שייקבעו.', 'success');
+          showMessage('תודה, הפרטים התקבלו ונשמרו בהצלחה! נשלח אליך את פרטי המפגש בהקדם.', 'success');
         } catch (error) {
           showMessage('לא הצלחנו להשלים את ההרשמה כרגע. אפשר לנסות שוב בעוד רגע.', 'error');
         } finally {

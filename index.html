@@ -594,7 +594,7 @@
         message.className = `form-message ${type}`;
       };
 
-      const API_ENDPOINT = 'https://yacov-gs65-stealth-9sg.tailb4f2c4.ts.net:8443/or-leads/api/register';
+      const API_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzi223PBaxsjb8rwkXe8-9whlafWM_pWIex_lw7AMGxPLFRvdP2QLOdrUDVWnl7sXAA/exec';
 
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
@@ -626,13 +626,12 @@
         button.textContent = 'שולחים…';
 
         try {
-          const response = await fetch(API_ENDPOINT, {
+          await fetch(API_ENDPOINT, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
             body: JSON.stringify({ name, email, phone, website: data.website, source: location.href })
           });
-          const result = await response.json();
-          if (!response.ok || result.status !== 'success') throw new Error(result.message || 'ההרשמה לא הושלמה');
           form.reset();
           showMessage('תודה, הפרטים התקבלו ונשמרו בהצלחה! נשלח אליך את פרטי המפגש בהקדם.', 'success');
         } catch (error) {

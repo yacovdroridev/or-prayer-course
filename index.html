@@ -135,31 +135,32 @@
     .button-secondary { color: var(--wine-dark); border-color: rgba(126, 53, 67, .3); background: transparent; }
     .microcopy { margin: 12px 0 0; color: var(--muted); font-size: .84rem; }
 
-    .hero-art { position: relative; min-height: 540px; display: grid; place-items: center; }
+    .hero-art { position: relative; display: grid; place-items: center; width: 100%; }
     .prayer-card {
       position: relative;
-      width: min(100%, 390px);
-      padding: 62px 48px 54px;
+      width: 100%;
+      max-width: 390px;
+      margin-inline: auto;
+      padding: 50px 36px;
       background: var(--white);
       border: 1px solid var(--line);
-      border-radius: 190px 190px 18px 18px;
+      border-radius: 170px 170px 20px 20px;
       box-shadow: var(--shadow);
       text-align: center;
+      box-sizing: border-box;
     }
     .prayer-card::before {
       content: "";
       position: absolute;
-      inset: 18px;
+      inset: 12px;
       border: 1px solid rgba(182, 139, 79, .28);
-      border-radius: 170px 170px 11px 11px;
+      border-radius: 158px 158px 12px 12px;
       pointer-events: none;
     }
     .prayer-card .small { position: relative; color: var(--sage); font-size: .84rem; font-weight: 700; letter-spacing: .09em; }
-    .prayer-card blockquote { position: relative; margin: 24px 0 18px; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.18; font-weight: 700; }
+    .prayer-card blockquote { position: relative; margin: 20px 0 16px; font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.18; font-weight: 700; }
     .prayer-card p { position: relative; margin: 0 auto; max-width: 260px; color: var(--muted); font-size: .95rem; }
-    .thread { position: absolute; width: 124px; height: 124px; color: var(--gold); opacity: .65; }
-    .thread-top { top: 6%; right: -2%; transform: rotate(12deg); }
-    .thread-bottom { bottom: 4%; left: -3%; transform: rotate(190deg); }
+    .thread { display: none !important; }
 
     .opening { text-align: center; }
     .opening blockquote { margin: 32px auto; max-width: 880px; color: var(--wine-dark); font-size: clamp(2rem, 4.4vw, 3.5rem); line-height: 1.28; font-weight: 600; }
@@ -345,19 +346,11 @@
         </div>
 
         <div class="hero-art" aria-hidden="true">
-          <svg class="thread thread-top" viewBox="0 0 140 140">
-            <path d="M19 108C33 38 90 18 119 43 141 63 109 88 76 72 48 58 43 26 65 15" fill="none" stroke="currentColor" stroke-width="1.2"/>
-            <circle cx="19" cy="108" r="3" fill="currentColor"/>
-          </svg>
           <article class="prayer-card">
             <span class="small">מילים • משמעות • חיים</span>
             <blockquote>להכניס משמעות,<br>נוכחות וחיבור.</blockquote>
             <p>כוונה אינה מצב שבו המחשבות לא בורחות. כוונה היא היכולת לחזור.</p>
           </article>
-          <svg class="thread thread-bottom" viewBox="0 0 140 140">
-            <path d="M19 108C33 38 90 18 119 43 141 63 109 88 76 72 48 58 43 26 65 15" fill="none" stroke="currentColor" stroke-width="1.2"/>
-            <circle cx="19" cy="108" r="3" fill="currentColor"/>
-          </svg>
         </div>
       </div>
     </section>
